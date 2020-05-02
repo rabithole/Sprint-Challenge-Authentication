@@ -28,19 +28,19 @@ const joke = {
 // });
 
 describe('Login', () => {
-	// it('return 404', () => {
-	// 	return request(server)
-	// 		.get('/api/auth/login')
-	// 		.then(res => {
-	// 			expect(res.status).toBe(404);
-	// 		})
-	// })
-
-	it('return json', () => {
+	it('return 404', () => {
 		return request(server)
 			.get('/api/auth/login')
-			.expect('Content-Length', '153')
-		})
+			.then(res => {
+				expect(res.status).toBe(404);
+			})
+	})
+
+	// it('return json', () => {
+	// 	return request(server)
+	// 		.get('/api/auth/login')
+	// 		.expect('Content-Length', '153')
+	// 	})
 
 	// it('auth user', () => {
 	// 	return request(server)
